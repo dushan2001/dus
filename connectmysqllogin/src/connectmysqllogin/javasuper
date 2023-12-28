@@ -1,0 +1,45 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package connectmysqllogin;
+
+import javax.swing.JOptionPane;
+import java.sql.Connection;
+import java.sql.DriverManager;
+/**
+ *
+ * @author Dushan
+ */
+public class Connectmysqllogin {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       try{
+           //Register the connection
+           //Get the class driver
+           Class.forName("com.mysql.cj.jdbc.Driver");
+           //get the database url
+           String url="jdbc:mysql://localhost:3306/login?zeroDateTimeBehavior=CONVERT_TO_NULL";
+           //create a string object of username and password of mysqlserver connection
+           String username ="root";
+           String password ="dushan123!@#";
+           //create a connection object to register the driver
+           Connection conn=DriverManager.getConnection(url, username, password);
+           //create astring object of sql query
+           String sql="SELECT*FROM log";
+           //prepare the 
+           
+           
+           
+           
+                   
+       }catch(Exception e){
+           JOptionPane.showMessageDialog(null, e);
+           
+       }
+    }
+    
+}
